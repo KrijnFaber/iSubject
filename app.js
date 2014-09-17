@@ -12,7 +12,7 @@
   		};
   	},
 
-  		updateSubject: function(ticket_id, dataToSend) {
+  		updateSubject: function(ticket_id, dataToSend) { // Push the updated subject to the ticket - JSON PUT
   			return {
   				url: helpers.fmt('/api/v2/tickets/%@.json', ticket_id),
   				type: 'PUT',
