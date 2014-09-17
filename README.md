@@ -1,14 +1,12 @@
-# App name
+# iSubject
 
-[brief description of the app]
+Zendesk application for monitoring when end-user's update the subject on email replies.
 
 ### The following information is displayed:
 
-* info1
-* info2
-* info3
+To be updated!
 
-Please submit bug reports to [Insert Link](). Pull requests are welcome.
+Please submit bug reports to kfaber@zendesk.com.
 
 ### Screenshot(s):
-[put your screenshots down here.]
+
