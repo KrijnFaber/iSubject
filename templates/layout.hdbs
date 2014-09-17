@@ -1,0 +1,8 @@
+<header>
+  <span class="logo"/>
+  <h3>{{setting "name"}}</h3>
+</header>
+<section data-main/>
+<footer>
+<span class="footerClass"><a href="mailto:kfaber@zendesk.com">Questions? Bugs? Tell me about them!</span>
+</footer>

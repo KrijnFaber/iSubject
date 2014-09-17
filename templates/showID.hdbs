@@ -1,0 +1,14 @@
+<div class="alert alert-info"><h4>Welcome {{username}}!</h4> <p>Ticket ID found in subject: <strong>{{match}}</strong></p></div><br />
+
+<p><b>The subject of the latest email was:</b></p>
+<p><i>{{subject}}</i></p>
+<hr />
+<p><b>The subject of this ticket is: </b></p>
+<p><i>{{currentSubject}}</i></p>
+<hr />
+<center>
+<button id="updateSubject" class="btn btn-success"><i class="icon-upload"></i> Update Subject</button>
+&nbsp;&nbsp;&nbsp;
+<button id="refreshNow" class="btn btn-success"><i class="icon-refresh"></i> Refresh</button>
+</center>
+

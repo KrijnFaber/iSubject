@@ -1,0 +1,2 @@
+<div class="alert"><h4>No emails are on this ticket.</h4><p>Use the button below to refresh!</p></div>
+<center><button id="refreshNow" class="btn btn-success"><i class="icon-refresh"></i> REFRESH!</button></center>
