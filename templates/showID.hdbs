@@ -1,4 +1,4 @@
-<div class="alert alert-info"><h4>Welcome {{username}}!</h4> <p>Ticket ID found in subject: <strong>{{match}}</strong></p></div><br />
+<div class="alert alert-info"><h4>Welcome {{username}}!</h4> <p><strong>{{match}}</strong></p></div><br />
 
 <p><b>The subject of the latest email was:</b></p>
 <p><i>{{subject}}</i></p>

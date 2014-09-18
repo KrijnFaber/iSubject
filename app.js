@@ -71,9 +71,7 @@
       }
       var currentAccount = this.currentAccount();
   	  var activeSubDomain = currentAccount.subdomain();
-  	  console.log(activeSubDomain);
       var sourceLink = "https://" + activeSubDomain + ".zendesk.com/audits/" + entity.audits[foundID].id + "/email.html?ticket_id=" + this.ticket().id();
-      console.log(sourceLink);
       var sourceHTML = this.ajax('getSource', sourceLink);
       sourceHTML.done(this.showHTML);
       sourceHTML.fail(this.showError);
@@ -100,20 +98,22 @@
       checkString = subject;
       var storedSubject = this.store(checkString);
       var userName = this.currentUser().name();
-      var reg1 = /(#[0-9]{5,10})/i;
-      var reg2 = /(Ticket id:\s?[0-9]{5,10})/i;
+      var reg1 = /(#[0-9]{5,10})/i; 				//Ticket ID starting with a # - followed by 5 to 10 digits
+      var reg2 = /(Ticket id:\s?[0-9]{5,10})/i; 	//Ticket ID starting with Ticket ID: - followed by 5 to 10 digits
       var matchFound = false;
       if (!new RegExp(reg1).test(checkString)) {
         console.log("No Match");
+        matchFound = "-";
       } else {
         console.log("Match:" + checkString);
-        matchFound = true;
+        matchFound = "Ticket ID has been found!";
       }
       if (!new RegExp(reg2).test(checkString)) {
         console.log("No Match");
+        matchFound = "-";
       } else {
         console.log("Match:" + checkString);
-        matchFound = true;
+        matchFound = "Ticket ID has been found!";
       }
       var currentSubject = this.ticket().subject();
       this.switchTo('showID', { subject: subject, match: matchFound, username: userName, currentSubject: currentSubject});
@@ -123,13 +123,11 @@
 
     updateSubjectAjax: function() {
     	var ticket_id = this.ticket().id();
-    	console.log(checkString);
     	var dataToSend = {
     		"ticket":{
     		"subject":checkString.trim()
     	}
     };
-    	console.log(dataToSend);
     	var setSubject = this.ajax('updateSubject', ticket_id, dataToSend);
     	setSubject.done(this.updateSuccess);
     	setSubject.fail(this.showError);
