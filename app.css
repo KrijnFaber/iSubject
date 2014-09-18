@@ -15,3 +15,9 @@ a:link {
 	font-style: italic;
 	color: #78A300;
 }
+.centered {
+    margin: 0 auto;
+    text-align: left;
+    width: 100%;
+    float: right;
+}

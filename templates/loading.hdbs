@@ -1,1 +1,4 @@
 <center><p><img src="https://z3nkfaber2.zendesk.com/attachments/token/wm7PAcv1ZgVDmSEDsN7lNPkPt/?name=loadingColor.gif" alt="loading" width="50" height="50" /></p> <p>Loading latest email information...</p></center>
+<div class="progress progress-striped active">
+  <div class="bar" style="width: 100%;"></div>
+</div>
