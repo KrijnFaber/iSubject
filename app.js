@@ -89,10 +89,19 @@
       subString = subString.replace('</div>', '');
       subString = subString.replace('<div id="', '');
       subString = subString.replace('Subject:', '');
+      subString = subString.replace('<div class="field">', '');
+      substring = subString.replace('<label>Attachments:</label>', '');
+      subString = subString.replace('<div class="value">', '');
       subString = subString.replace(/^\s*[\r\n]/gm, "");
       this.validateAppendix(subString);
 
     },
+
+    //stripAttachments: function(HTMLA) {
+      //var rawHTML = HTMLA;
+      //var b = rawHTML.indexOf("<div class="field">");
+      //var e = "";
+    //},
 
     validateAppendix: function(subject) {
       checkString = subject;
